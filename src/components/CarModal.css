@@ -1,0 +1,502 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(10, 14, 23, 0.75);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.modal-content-card {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 24px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  border: 1px solid #E2E8F0;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #F1F5F9;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background: #E2E8F0;
+  color: #0F172A;
+  transform: scale(1.08);
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.modal-visual {
+  background: #F8FAFC;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-right: 1px solid #E2E8F0;
+}
+
+.engine-sound-btn {
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+  color: #60A5FA;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  padding: 0.55rem 1.1rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.engine-sound-btn:hover {
+  background: #2563EB;
+  color: #FFFFFF;
+  border-color: #2563EB;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+}
+
+.modal-brand-badge {
+  font-family: var(--font-heading);
+  font-size: 0.725rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #2563EB;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 0.3rem 0.85rem;
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+}
+
+.modal-car-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+  width: 100%;
+}
+
+.modal-car-img {
+  max-width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+}
+
+.modal-spec-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.spec-highlight-box {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 0.75rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.spec-highlight-icon {
+  color: #2563EB;
+  margin-bottom: 0.25rem;
+}
+
+.spec-highlight-val {
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.spec-highlight-lbl {
+  font-size: 0.65rem;
+  color: #64748B;
+  font-weight: 500;
+}
+
+/* Right Details Column */
+.modal-details {
+  padding: 2.5rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+.modal-car-title {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+}
+
+.modal-car-subtitle {
+  font-size: 0.85rem;
+  color: #64748B;
+}
+
+.modal-car-price-badge {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #2563EB;
+  background: #EFF6FF;
+  padding: 0.4rem 0.85rem;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+/* Shadcn UI Tabs Styling (Rounded-Full Card & Active Pill) */
+.modal-nav-tabs {
+  display: flex;
+  gap: 0.35rem;
+  background: #151B27;
+  border: 1px solid #263043;
+  padding: 4px;
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+}
+
+.modal-tab-btn {
+  flex: 1;
+  font-family: var(--font-heading);
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: #94A3B8;
+  padding: 0.5rem 0.85rem;
+  border-radius: 9999px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border: none;
+}
+
+.modal-tab-btn.active {
+  background: #2563EB;
+  color: #FFFFFF;
+  font-weight: 700;
+  border-radius: 9999px;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+}
+
+.modal-car-desc {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.modal-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.feature-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1E293B;
+}
+
+.modal-action-btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  background: #2563EB;
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.85rem;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.modal-action-btn-primary:hover {
+  background: #1D4ED8;
+  transform: translateY(-2px);
+}
+
+/* Specs Table */
+.modal-specs-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.specs-table-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  border-bottom: 1px dashed #E2E8F0;
+  font-size: 0.85rem;
+}
+
+.specs-table-key {
+  color: #64748B;
+  font-weight: 600;
+}
+
+.specs-table-val {
+  color: #0F172A;
+  font-weight: 700;
+}
+
+/* Booking Form */
+.delivery-option-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.delivery-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.5rem;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  color: #64748B;
+}
+
+.delivery-btn.active {
+  border-color: #2563EB;
+  background: #EFF6FF;
+  color: #2563EB;
+}
+
+.form-group {
+  margin-bottom: 0.85rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.input-with-icon {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  color: #94A3B8;
+  pointer-events: none;
+}
+
+.input-with-icon .modal-input {
+  padding-left: 2.25rem;
+}
+
+.modal-input {
+  width: 100%;
+  background: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: #0F172A;
+  outline: none;
+}
+
+.modal-input:focus {
+  border-color: #2563EB;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.modal-submit-btn {
+  width: 100%;
+  background: #2563EB;
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.85rem;
+  border-radius: 12px;
+  margin-top: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.modal-submit-btn:hover {
+  background: #1D4ED8;
+}
+
+.modal-success-box {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.success-icon {
+  color: #10B981;
+  margin-bottom: 0.75rem;
+}
+
+.btn-modal-close {
+  background: #0F172A;
+  color: #FFFFFF;
+  padding: 0.65rem 1.75rem;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .modal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-visual {
+    border-right: none;
+    border-bottom: 1px solid #E2E8F0;
+    padding: 1.75rem;
+  }
+
+  .modal-details {
+    padding: 1.75rem;
+  }
+}
+
+/* ── Sold Ribbon ────────────────────────── */
+.modal-sold-ribbon {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 10;
+  padding: 4px 16px;
+  background: linear-gradient(135deg, #DC2626, #B91C1C);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(220, 38, 38, 0.4);
+}
+
+.modal-car-price-badge.sold {
+  background: linear-gradient(135deg, #DC2626, #B91C1C) !important;
+  color: #FFFFFF !important;
+}
+
+/* ── WhatsApp & Contact CTA ─────────────── */
+.modal-cta-row {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.whatsapp-btn {
+  background: linear-gradient(135deg, #25D366, #128C7E) !important;
+  border-color: #25D366 !important;
+  color: #FFFFFF !important;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.25s ease;
+}
+
+.whatsapp-btn:hover {
+  background: linear-gradient(135deg, #20BD5A, #0F7A6B) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+}
+
+.modal-action-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  background: rgba(0, 0, 0, 0.05);
+  color: #334155;
+  border: 1px solid #E2E8F0;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.modal-action-btn-secondary:hover {
+  background: rgba(0, 0, 0, 0.08);
+  border-color: #CBD5E1;
+}
+
+/* ── Sold Notice ────────────────────────── */
+.modal-sold-notice {
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  background: rgba(220, 38, 38, 0.06);
+  border: 1px solid rgba(220, 38, 38, 0.15);
+  border-radius: 12px;
+}
+
+.modal-sold-notice p {
+  color: #64748B;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.sold-price {
+  color: #DC2626 !important;
+  font-weight: 800;
+}

@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Permanent Luxury Dark Theme Variables */
+  --bg-main: #0A0E17;
+  --bg-surface: #0E1420;
+  --bg-card: #151B27;
+  --bg-section-alt: #0F172A;
+  --text-main: #FFFFFF;
+  --text-muted: #94A3B8;
+  --border-main: #263043;
+  --card-bg: #151B27;
+
+  --color-accent-blue: #2563EB;
+  --color-accent-blue-hover: #1D4ED8;
+  
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.08);
+  --shadow-lg: 0 20px 30px -10px rgba(0,0,0,0.15);
+  
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+  
+  --transition-fast: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  font-style: normal;
+  background-color: #0A0E17;
+  color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.modrino-app {
+  overflow-x: hidden;
+  max-width: 100vw;
+  background-color: #0A0E17;
+  color: #FFFFFF;
+  font-style: normal;
+}
+
+/* Permanent Dark Theme Component Styling */
+.cartypes-section {
+  background-color: #0A0E17;
+}
+
+.categories-section {
+  background-color: #0A0E17;
+}
+
+.categories-title {
+  font-family: var(--font-heading);
+  font-style: normal;
+  color: #FFFFFF;
+}
+
+.car-card {
+  background: #151B27;
+  border-color: #263043;
+}
+
+.car-card-title {
+  font-family: var(--font-heading);
+  font-style: normal;
+  color: #FFFFFF;
+}
+
+.car-card-subtitle {
+  color: #94A3B8;
+}
+
+.car-card-image-box {
+  background: #0E1420;
+}
+
+.categories-search-box,
+.categories-sort-box {
+  background: #151B27;
+  border-color: #263043;
+}
+
+.categories-search-input,
+.categories-sort-select {
+  color: #FFFFFF;
+  background: transparent;
+}
+
+.categories-search-input::placeholder {
+  color: #64748B;
+}
+
+.category-tab-btn {
+  color: #94A3B8;
+}
+
+.category-tab-btn.active {
+  color: #60A5FA;
+}
+
+.car-card-view-btn {
+  background: #1E293B;
+  color: #F8FAFC;
+}
+
+.car-card-view-btn:hover {
+  background: #2563EB;
+  color: #FFFFFF;
+}
+
+.spec-badge {
+  background: #1E293B;
+  border-color: #334155;
+  color: #CBD5E1;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-style: normal;
+  transition: all var(--transition-fast);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0E17;
+}
+::-webkit-scrollbar-thumb {
+  background: #2563EB;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1D4ED8;
+}
+
+/* Keyframe Animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(0.5deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.08); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-float {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Common Container Utility */
+.site-container {
+  max-width: 1440px;
+  width: 92%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .site-container {
+    width: 95%;
+    padding: 0 0.85rem;
+  }
+}

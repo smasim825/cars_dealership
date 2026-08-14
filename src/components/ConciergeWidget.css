@@ -1,0 +1,161 @@
+.concierge-widget-wrapper {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+}
+
+.concierge-float-btn {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.concierge-float-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 14px 35px rgba(37, 99, 235, 0.5);
+}
+
+.online-indicator-dot {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #10B981;
+  border: 2px solid #FFFFFF;
+}
+
+/* Popover Card */
+.concierge-popover {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  width: 320px;
+  background: #0A0E17;
+  border: 1px solid #263043;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.concierge-header {
+  background: #151B27;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid #263043;
+}
+
+.concierge-avatar-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.2);
+  border: 1px solid #2563EB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #60A5FA;
+}
+
+.concierge-name {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.concierge-status {
+  font-size: 0.7rem;
+  color: #10B981;
+  font-weight: 600;
+}
+
+.concierge-close-btn {
+  margin-left: auto;
+  color: #94A3B8;
+  padding: 0.25rem;
+}
+
+.concierge-close-btn:hover {
+  color: #FFFFFF;
+}
+
+/* Directory Body */
+.concierge-directory-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.concierge-dir-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: #151B27;
+  border: 1px solid #263043;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.concierge-dir-item:hover {
+  border-color: #2563EB;
+  background: #1E293B;
+  transform: translateX(3px);
+}
+
+.concierge-dir-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: rgba(37, 99, 235, 0.15);
+  color: #60A5FA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.concierge-dir-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.concierge-dir-text span {
+  font-size: 0.7rem;
+  color: #94A3B8;
+}
+
+.concierge-dir-text strong {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: #FFFFFF;
+}
+
+.concierge-dir-arrow {
+  color: #64748B;
+  transition: color 0.2s ease;
+}
+
+.concierge-dir-item:hover .concierge-dir-arrow {
+  color: #60A5FA;
+}

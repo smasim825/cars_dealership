@@ -1,0 +1,227 @@
+.compare-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  background: rgba(10, 14, 23, 0.85);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.compare-modal-card {
+  position: relative;
+  background: #151B27;
+  color: #FFFFFF;
+  border-radius: 24px;
+  max-width: 920px;
+  width: 100%;
+  padding: 2.25rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  border: 1px solid #263043;
+}
+
+.compare-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #1E293B;
+  color: #94A3B8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.compare-modal-close:hover {
+  background: #2563EB;
+  color: #FFFFFF;
+}
+
+.compare-header {
+  margin-bottom: 1.75rem;
+}
+
+.compare-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #60A5FA;
+  font-size: 0.725rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+}
+
+.compare-header h2 {
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.compare-grid-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr 1fr;
+  gap: 1rem;
+  min-width: 700px;
+}
+
+.compare-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.compare-car-header-stub {
+  height: 140px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 0.85rem;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #64748B;
+}
+
+.compare-car-header {
+  height: 140px;
+  background: #0E1420;
+  border: 1px solid #263043;
+  border-radius: 16px 16px 0 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.compare-car-img {
+  height: 65px;
+  object-fit: contain;
+  margin-bottom: 0.35rem;
+}
+
+.compare-car-header h4 {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.compare-car-brand {
+  font-size: 0.7rem;
+  color: #60A5FA;
+  font-weight: 600;
+}
+
+.compare-row-item {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #263043;
+  color: #CBD5E1;
+}
+
+.compare-row-item.label {
+  font-weight: 600;
+  color: #94A3B8;
+  background: transparent;
+}
+
+.compare-col.car-data-col .compare-row-item {
+  background: #151B27;
+}
+
+.compare-row-item.highlight {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: #60A5FA;
+  font-size: 1rem;
+}
+
+.compare-row-item.status {
+  color: #10B981;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.compare-car-empty-col {
+  background: #0E1420;
+  border: 2px dashed #263043;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.empty-compare-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  color: #64748B;
+  font-size: 0.875rem;
+}
+
+.empty-icon {
+  color: #3B82F6;
+}
+
+.compare-close-btn {
+  width: 100%;
+  background: #2563EB;
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.85rem;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.compare-close-btn:hover {
+  background: #1D4ED8;
+}
+
+.modrino-app.light-mode .compare-modal-card {
+  background: #FFFFFF;
+  color: #0F172A;
+  border-color: #CBD5E1;
+}
+
+.modrino-app.light-mode .compare-header h2 {
+  color: #0F172A;
+}
+
+.modrino-app.light-mode .compare-car-header {
+  background: #F1F5F9;
+  border-color: #CBD5E1;
+}
+
+.modrino-app.light-mode .compare-car-header h4 {
+  color: #0F172A;
+}
+
+.modrino-app.light-mode .compare-row-item {
+  border-bottom-color: #E2E8F0;
+  color: #334155;
+}
+
+.modrino-app.light-mode .compare-col.car-data-col .compare-row-item {
+  background: #FFFFFF;
+}

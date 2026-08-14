@@ -1,0 +1,212 @@
+.navbar-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 1.25rem 0;
+  background: linear-gradient(180deg, rgba(10, 14, 23, 0.9) 0%, rgba(10, 14, 23, 0) 100%);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  z-index: 101;
+}
+
+.navbar-logo-img {
+  height: 88px;
+  width: auto;
+  max-width: 280px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.7));
+  transition: transform 0.25s ease;
+}
+
+.navbar-logo-img:hover {
+  transform: scale(1.04);
+}
+
+.navbar-logo-fallback {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
+.logo-car-icon {
+  color: #3B82F6;
+}
+
+.navbar-right-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.currency-selector-pill, .language-selector-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+  backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+}
+
+.language-selector-pill {
+  background: rgba(37, 99, 235, 0.18);
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+.currency-selector-pill:hover, .language-selector-pill:hover {
+  background: rgba(37, 99, 235, 0.3);
+  border-color: #3B82F6;
+  transform: scale(1.04);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+.currency-icon, .language-icon {
+  color: #60A5FA;
+}
+
+.currency-select-input, .language-select-input {
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+}
+
+.currency-select-input option, .language-select-input option {
+  background: #0A0E17;
+  color: #FFFFFF;
+}
+
+.navbar-desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+}
+
+.nav-link-btn {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  position: relative;
+  padding: 0.4rem 0;
+  letter-spacing: 0.3px;
+  transition: color 0.25s ease;
+  background: transparent;
+  border: none;
+}
+
+.nav-link-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #2563EB;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 0 10px #2563EB, 0 0 18px rgba(37, 99, 235, 0.8);
+}
+
+.nav-link-btn:hover {
+  color: #FFFFFF;
+}
+
+.nav-link-btn:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-link-btn.active {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.nav-link-btn.active::after {
+  transform: scaleX(1);
+  background: #60A5FA;
+  box-shadow: 0 0 12px #60A5FA, 0 0 20px rgba(96, 165, 250, 0.8);
+}
+
+.navbar-mobile-toggle {
+  display: none;
+  color: var(--color-white);
+  padding: 0.5rem;
+  z-index: 101;
+}
+
+.mobile-controls-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 868px) {
+  .navbar-logo-img {
+    height: 52px;
+    max-width: 180px;
+  }
+
+  .navbar-right-group {
+    display: none;
+  }
+
+  .navbar-mobile-toggle {
+    display: block;
+  }
+
+  .navbar-mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(10, 14, 23, 0.96);
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.75rem;
+    z-index: 99;
+  }
+
+  .mobile-nav-link {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+  }
+
+  .mobile-nav-link.active, .mobile-nav-link:hover {
+    color: var(--color-white);
+    transform: scale(1.05);
+  }
+}
