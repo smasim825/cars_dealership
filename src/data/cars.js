@@ -43,31 +43,32 @@ export const CATEGORY_TABS = [
 ];
 
 export const FEATURED_CAR = {
-  id: 'rolls-royce-wraith-demo',
-  name: 'Rolls Royce Wraith',
-  brand: 'Rolls-Royce',
-  subtitle: 'V12 Twin-Turbocharged Luxury Concept (Demo Exhibit)',
-  price: 'DEMO EXHIBIT',
+  id: 'toyota-vellfire-zg',
+  name: 'Toyota Vellfire 2.5L ZG Edition',
+  brand: 'Toyota',
+  subtitle: '2.5L Premium Executive Minivan',
+  price: '¥ASK',
   numericPrice: 0,
-  image: '/assets/beautiful-rolls-royce-car_999195-437-removebg-preview 1.png',
+  image: '/assets/car2/nobg.png',
   bannerBg: '/assets/Rectangle 54.png',
-  type: 'coupe',
-  status: 'demo',
-  isDemo: true,
+  type: 'suv',
+  status: 'in_stock',
+  isDemo: false,
   specs: {
-    engine: '6.6L V12 Twin-Turbo',
-    horsepower: '624 HP',
-    acceleration: '0-60 in 4.4s',
-    topSpeed: '155 mph',
-    transmission: '8-Speed Automatic',
-    drive: 'Rear-Wheel Drive'
+    engine: '2.5L Inline-4',
+    mileage: '90,000 km',
+    grade: 'ZG Edition',
+    shaken: '2028年3月',
+    transmission: 'CVT Automatic',
   },
-  description: 'The Rolls Royce Wraith represents the pinnacle of luxury grand touring, presented here as an exclusive showroom concept demo display.',
+  description: "The Toyota Vellfire combines premium comfort, executive styling, and spacious luxury, making it an ideal choice for refined family and VIP travel.",
   features: [
-    'Handcrafted Starlight Headliner',
-    '6.6L Twin-Turbo V12 Engine',
-    'Bespoke Audio & Phantom Leather',
-    'Showroom Concept Demo Unit',
+    'Premium Leather Pilot Seats',
+    '3-Eye LED Headlights',
+    'Power Back Door',
+    'Toyota Safety Sense',
+    'Back Camera',
+    'Cruise Control',
   ]
 };
 

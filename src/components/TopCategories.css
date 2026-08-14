@@ -136,15 +136,16 @@
 .banner-content {
   position: relative;
   z-index: 2;
-  display: grid;
-  grid-template-columns: 1fr 1.15fr 0.85fr;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 2.5rem 3rem;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .banner-text-side {
-  max-width: 500px;
+  flex: 1;
+  max-width: 440px;
 }
 
 .banner-badge {
@@ -164,15 +165,15 @@
 
 .banner-car-title {
   font-family: var(--font-heading);
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   font-weight: 800;
   color: #FFFFFF;
-  line-height: 1.1;
+  line-height: 1.15;
   margin-bottom: 0.75rem;
 }
 
 .banner-car-subtitle {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #94A3B8;
   line-height: 1.6;
   margin-bottom: 1.75rem;
@@ -191,9 +192,10 @@
 
 .spec-val {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: #FFFFFF;
+  white-space: nowrap;
 }
 
 .spec-lbl {
@@ -202,8 +204,9 @@
   font-weight: 500;
 }
 
-/* Center Blue Supercar Image Showcase */
+/* Center Vehicle Showcase Image */
 .banner-image-wrapper {
+  flex: 1.2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -221,11 +224,11 @@
 
 .display-pedestal-glow {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -40%);
-  width: 320px;
-  height: 180px;
+  width: 380px;
+  height: 160px;
   background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.35) 0%, rgba(37, 99, 235, 0.15) 50%, transparent 75%);
   filter: blur(25px);
   pointer-events: none;
@@ -234,19 +237,19 @@
 
 .display-shadow-ellipse {
   position: absolute;
-  bottom: 0px;
+  bottom: -5px;
   left: 50%;
   transform: translateX(-50%);
-  width: 260px;
-  height: 35px;
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 80%);
+  width: 320px;
+  height: 30px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 80%);
   border-radius: 50%;
   pointer-events: none;
   z-index: 1;
 }
 
 .banner-car-img {
-  width: 125%;
+  width: 100%;
   max-width: 480px;
   height: auto;
   object-fit: contain;
@@ -257,7 +260,7 @@
 }
 
 .featured-banner-card:hover .banner-car-img {
-  transform: scale(1.08) translateY(-6px);
+  transform: scale(1.06) translateY(-6px);
   filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 45px rgba(59, 130, 246, 0.45));
 }
 
@@ -272,6 +275,7 @@
   align-items: flex-end;
   gap: 1.1rem;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
 }
 
 .banner-luxury-tag {
@@ -548,26 +552,95 @@
   font-weight: 600;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
+  .banner-content {
+    flex-wrap: wrap;
+    padding: 2rem 2.25rem;
+    gap: 1.75rem;
+  }
+
+  .banner-text-side {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .banner-car-title {
+    font-size: 2.1rem;
+  }
+
+  .banner-image-wrapper {
+    flex: 1;
+    max-width: 420px;
+  }
+
+  .banner-car-img {
+    max-width: 400px;
+  }
+
+  .banner-right-card {
+    align-items: center;
+    flex-direction: row;
+    width: auto;
+    gap: 1rem;
+    padding: 1.1rem 1.4rem;
+  }
+
   .cars-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 868px) {
+@media (max-width: 768px) {
   .banner-content {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 2rem;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    gap: 1.75rem;
   }
 
-  .banner-right-action {
-    align-items: flex-start;
+  .banner-text-side {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner-car-title {
+    font-size: 1.85rem;
+  }
+
+  .banner-specs-row {
+    justify-content: center;
+    gap: 1.5rem;
     width: 100%;
   }
 
-  .banner-price-tag {
-    align-items: flex-start;
+  .banner-image-wrapper {
+    width: 100%;
+    max-width: 380px;
+    margin: 0.5rem 0;
+  }
+
+  .banner-car-img {
+    max-width: 100%;
+  }
+
+  .display-pedestal-glow {
+    width: 280px;
+    height: 120px;
+  }
+
+  .display-shadow-ellipse {
+    width: 240px;
+    height: 25px;
+  }
+
+  .banner-right-card {
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
   }
 
   .cars-grid {

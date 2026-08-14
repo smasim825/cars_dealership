@@ -129,32 +129,32 @@ export default function TopCategories({
               <div className="banner-text-side">
                 <Badge variant="gold" className="banner-badge">
                   <Sparkles size={14} />
-                  <span>DEMO SHOWCASE EXHIBIT</span>
+                  <span>FEATURED VEHICLE OF THE MONTH</span>
                 </Badge>
                 <h3 className="banner-car-title">{FEATURED_CAR.name}</h3>
                 <p className="banner-car-subtitle">{FEATURED_CAR.description}</p>
                 <div className="banner-specs-row">
                   <div className="banner-spec-item">
-                    <span className="spec-val">{FEATURED_CAR.specs.engine}</span>
-                    <span className="spec-lbl">Powertrain</span>
+                    <span className="spec-val">{FEATURED_CAR.specs.engine || '2.5L Inline-4'}</span>
+                    <span className="spec-lbl">Engine</span>
                   </div>
                   <div className="banner-spec-item">
-                    <span className="spec-val">{FEATURED_CAR.specs.horsepower}</span>
-                    <span className="spec-lbl">Performance</span>
+                    <span className="spec-val">{FEATURED_CAR.specs.mileage || '90,000 km'}</span>
+                    <span className="spec-lbl">Mileage</span>
                   </div>
                   <div className="banner-spec-item">
-                    <span className="spec-val">{FEATURED_CAR.specs.acceleration}</span>
-                    <span className="spec-lbl">0-60 MPH</span>
+                    <span className="spec-val">{FEATURED_CAR.specs.transmission || 'CVT Automatic'}</span>
+                    <span className="spec-lbl">Transmission</span>
                   </div>
                 </div>
               </div>
 
-              {/* Center Rolls Royce Showcase Image */}
+              {/* Center Vehicle Showcase Image */}
               <div className="banner-image-wrapper">
                 <div className="banner-display-platform">
                   <div className="display-pedestal-glow"></div>
                   <img
-                    src="/assets/beautiful-rolls-royce-car_999195-437-removebg-preview 1.png"
+                    src={FEATURED_CAR.image || '/assets/car2/nobg.png'}
                     alt={FEATURED_CAR.name}
                     className="banner-car-img"
                   />
@@ -166,7 +166,7 @@ export default function TopCategories({
               <div className="banner-right-card">
                 <div className="banner-luxury-tag">
                   <Sparkles size={14} className="banner-tag-icon" />
-                  <span>Luxury Showcase</span>
+                  <span>FEATURED AVAILABLE</span>
                 </div>
                 <Button variant="default" className="banner-learn-btn">
                   <Eye size={16} />
