@@ -1,5 +1,5 @@
 .services-section {
-  padding: 4rem 0;
+  padding: 4.5rem 0;
   background-color: #0A0E17;
   color: #FFFFFF;
 }
@@ -13,7 +13,7 @@
   font-size: 2.25rem;
   font-weight: 800;
   color: #FFFFFF;
-  margin: 0;
+  margin: 0.25rem 0 0 0;
 }
 
 .services-grid {
@@ -24,30 +24,43 @@
 
 .service-card {
   position: relative;
-  background: #151B27;
-  border: 1px solid #263043;
+  background: #131A26;
+  border: 1px solid #222C3D;
   border-radius: 20px;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
-  border-color: #2563EB;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-4px);
+  border-color: #3B82F6;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
 }
 
 .service-card-text {
   padding: 2.25rem;
-  display: flex;
-  flex-direction: column;
 }
 
 .service-icon-header {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.service-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(37, 99, 235, 0.12);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  color: #60A5FA;
+  flex-shrink: 0;
 }
 
 .service-icon {
@@ -55,111 +68,105 @@
 }
 
 .service-tag {
-  font-size: 0.7rem;
+  font-size: 0.725rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   color: #94A3B8;
+  text-transform: uppercase;
 }
 
 .service-card-title {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   font-weight: 700;
   color: #FFFFFF;
-  margin-bottom: 0.75rem;
+  margin: 0 0 0.85rem 0;
+  line-height: 1.3;
 }
 
 .service-card-desc {
   font-size: 0.925rem;
   color: #94A3B8;
   line-height: 1.6;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Highlights Box */
+.service-highlights-container {
+  background: rgba(10, 14, 23, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.service-highlights-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #E2E8F0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 0.85rem 0;
 }
 
 .service-checklist {
   list-style: none;
   padding: 0;
-  margin: 0 0 1.75rem 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .service-checklist li {
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   color: #CBD5E1;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
+  line-height: 1.4;
 }
 
-.service-checklist li::before {
-  content: "✓";
+.check-icon {
   color: #3B82F6;
-  font-weight: 800;
+  flex-shrink: 0;
 }
 
+/* Learn / Request Button */
 .service-learn-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   color: #60A5FA;
+  background: transparent;
+  border: none;
+  padding: 0;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.925rem;
   margin-top: auto;
-  transition: gap 0.2s ease;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.service-learn-link .arrow-icon {
+  transition: transform 0.2s ease;
 }
 
 .service-learn-link:hover {
   color: #93C5FD;
-  gap: 0.75rem;
 }
 
-/* Service Card Image */
-.service-card-image {
-  cursor: pointer;
-  min-height: 320px;
-}
-
-.service-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.service-card-image:hover .service-img {
-  transform: scale(1.06);
-}
-
-.service-img-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(10, 14, 23, 0.1) 0%, rgba(10, 14, 23, 0.85) 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 2rem;
-}
-
-.overlay-tag {
-  font-size: 0.725rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  color: #60A5FA;
-  text-transform: uppercase;
-  margin-bottom: 0.35rem;
-}
-
-.overlay-title {
-  font-family: var(--font-heading);
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: #FFFFFF;
+.service-learn-link:hover .arrow-icon {
+  transform: translateX(4px);
 }
 
 @media (max-width: 850px) {
   .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .service-card-text {
+    padding: 1.75rem;
   }
 }

@@ -160,15 +160,17 @@
 .stat-badge-number {
   display: block;
   font-family: var(--font-heading);
-  font-size: 1.05rem;
-  font-weight: 800;
+  font-size: 0.95rem;
+  font-weight: 700;
   color: #FFFFFF;
+  line-height: 1.25;
 }
 
 .stat-badge-label {
   display: block;
-  font-size: 0.725rem;
+  font-size: 0.7rem;
   color: #94A3B8;
+  line-height: 1.2;
 }
 
 /* Light Theme Overrides */
