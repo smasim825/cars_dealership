@@ -11,10 +11,21 @@ dist/
 dist-ssr/
 .vite/
 
-# Environment variables
+# Environment variables & Secret keys
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+*service-account*.json
+*firebase*.json
+secrets/
+credentials/
+.aws/
+.gcp/
+.netrc
 
 # System & Editor files
 .DS_Store
@@ -27,4 +38,5 @@ dist-ssr/
 *.tar.gz
 *.tgz
 scratch/
+
 
