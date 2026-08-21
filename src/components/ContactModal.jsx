@@ -16,7 +16,7 @@ export default function ContactModal({ serviceTitle, onClose, t }) {
             <span>{t('contact_eyebrow')}</span>
           </div>
           <h2>{serviceTitle ? `ELITE MOTORS - ${serviceTitle}` : t('contact_title_default')}</h2>
-          <p>Direct contact channels for our automotive showroom.</p>
+          <p>{t('contact_sub')}</p>
         </div>
 
         <div className="contact-info-list">
@@ -56,7 +56,7 @@ export default function ContactModal({ serviceTitle, onClose, t }) {
             </div>
             <div>
               <span className="contact-info-label">{t('contact_showroom_label')}</span>
-              <span className="contact-info-value">17-3 Aina Shinden, Kawagoe City, Saitama Prefecture, Japan</span>
+              <span className="contact-info-value">{t('footer_address').replace('\n', ', ')}</span>
             </div>
           </div>
 

@@ -11,8 +11,20 @@ dist/
 dist-ssr/
 .vite/
 
+# Environment variables
+.env
+.env.local
+.env.*.local
+
 # System & Editor files
 .DS_Store
 .vscode/
 .idea/
 .vercel
+
+# Archives & Scratch files
+*.zip
+*.tar.gz
+*.tgz
+scratch/
+

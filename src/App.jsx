@@ -63,6 +63,7 @@ export default function App() {
       <Hero 
         onReadMore={handleReadMoreHero}
         onQuickSearch={handleQuickSearch} 
+        language={language}
         t={t}
       />
 
@@ -70,6 +71,7 @@ export default function App() {
       <CarTypes 
         selectedType={selectedBodyType} 
         onSelectType={(typeId) => setSelectedBodyType(typeId)} 
+        language={language}
         t={t}
       />
 
@@ -84,20 +86,22 @@ export default function App() {
         onResetBodyType={() => setSelectedBodyType(null)}
         onSelectCar={(car) => setSelectedCar(car)} 
         currency={currency}
+        language={language}
         t={t}
       />
 
       {/* Our Services Section */}
       <OurServices 
         onOpenServiceModal={handleOpenServiceModal} 
+        language={language}
         t={t}
       />
 
       {/* Footer */}
-      <Footer onOpenContact={handleOpenContact} t={t} />
+      <Footer onOpenContact={handleOpenContact} language={language} t={t} />
 
       {/* 24/7 Floating VIP Concierge Widget */}
-      <ConciergeWidget onOpenContact={handleOpenContact} t={t} />
+      <ConciergeWidget onOpenContact={handleOpenContact} language={language} t={t} />
 
       {/* Detailed Car Modal Popup */}
       {selectedCar && (
@@ -105,6 +109,7 @@ export default function App() {
           car={selectedCar} 
           onClose={() => setSelectedCar(null)} 
           currency={currency}
+          language={language}
           t={t}
         />
       )}
@@ -114,6 +119,7 @@ export default function App() {
         <ContactModal 
           serviceTitle={contactModalTitle} 
           onClose={() => setIsContactOpen(false)} 
+          language={language}
           t={t}
         />
       )}

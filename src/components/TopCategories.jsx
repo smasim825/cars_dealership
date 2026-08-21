@@ -16,6 +16,7 @@ export default function TopCategories({
   onResetBodyType,
   onSelectCar,
   currency,
+  language,
   t
 }) {
   const [activeTab, setActiveTab] = useState('all');
@@ -44,10 +45,11 @@ export default function TopCategories({
 
     if (queryToUse) {
       const matchName = car.name.toLowerCase().includes(queryToUse);
+      const matchNameJa = car.name_ja ? car.name_ja.toLowerCase().includes(queryToUse) : false;
       const matchBrand = car.brand ? car.brand.toLowerCase().includes(queryToUse) : false;
       const matchType = car.type.toLowerCase().includes(queryToUse);
       const matchEngine = car.specs?.engine ? car.specs.engine.toLowerCase().includes(queryToUse) : false;
-      return matchName || matchBrand || matchType || matchEngine;
+      return matchName || matchNameJa || matchBrand || matchType || matchEngine;
     }
 
     return true;
@@ -61,6 +63,12 @@ export default function TopCategories({
   } else if (sortBy === 'rating') {
     filteredCars = [...filteredCars].sort((a, b) => (b.rating || 0) - (a.rating || 0));
   }
+
+  const featuredName = (language === 'JA' && FEATURED_CAR.name_ja) ? FEATURED_CAR.name_ja : FEATURED_CAR.name;
+  const featuredDesc = (language === 'JA' && FEATURED_CAR.description_ja) ? FEATURED_CAR.description_ja : FEATURED_CAR.description;
+  const featuredEngine = (language === 'JA' && FEATURED_CAR.specs_ja?.engine) ? FEATURED_CAR.specs_ja.engine : FEATURED_CAR.specs.engine;
+  const featuredMileage = (language === 'JA' && FEATURED_CAR.specs_ja?.mileage) ? FEATURED_CAR.specs_ja.mileage : FEATURED_CAR.specs.mileage;
+  const featuredTrans = (language === 'JA' && FEATURED_CAR.specs_ja?.transmission) ? FEATURED_CAR.specs_ja.transmission : FEATURED_CAR.specs.transmission;
 
   return (
     <section id="categories" className="categories-section">
@@ -114,7 +122,7 @@ export default function TopCategories({
           </Tabs>
         </div>
 
-        {/* Featured Flagship Banner Card with Rolls Royce Demo Showcase Image */}
+        {/* Featured Flagship Banner Card */}
         {(!selectedBodyType || selectedBodyType === 'coupe') && !queryToUse && (
           <div
             className="featured-banner-card"
@@ -129,22 +137,22 @@ export default function TopCategories({
               <div className="banner-text-side">
                 <Badge variant="gold" className="banner-badge">
                   <Sparkles size={14} />
-                  <span>FEATURED VEHICLE OF THE MONTH</span>
+                  <span>{t('flagship_badge')}</span>
                 </Badge>
-                <h3 className="banner-car-title">{FEATURED_CAR.name}</h3>
-                <p className="banner-car-subtitle">{FEATURED_CAR.description}</p>
+                <h3 className="banner-car-title">{featuredName}</h3>
+                <p className="banner-car-subtitle">{featuredDesc}</p>
                 <div className="banner-specs-row">
                   <div className="banner-spec-item">
-                    <span className="spec-val">{FEATURED_CAR.specs.engine || '2.5L Inline-4'}</span>
-                    <span className="spec-lbl">Engine</span>
+                    <span className="spec-val">{featuredEngine || '2.5L Inline-4'}</span>
+                    <span className="spec-lbl">{t('lbl_engine')}</span>
                   </div>
                   <div className="banner-spec-item">
-                    <span className="spec-val">{FEATURED_CAR.specs.mileage || '90,000 km'}</span>
-                    <span className="spec-lbl">Mileage</span>
+                    <span className="spec-val">{featuredMileage || '90,000 km'}</span>
+                    <span className="spec-lbl">{t('lbl_mileage')}</span>
                   </div>
                   <div className="banner-spec-item">
-                    <span className="spec-val">{FEATURED_CAR.specs.transmission || 'CVT Automatic'}</span>
-                    <span className="spec-lbl">Transmission</span>
+                    <span className="spec-val">{featuredTrans || 'CVT Automatic'}</span>
+                    <span className="spec-lbl">{t('lbl_transmission')}</span>
                   </div>
                 </div>
               </div>
@@ -155,7 +163,7 @@ export default function TopCategories({
                   <div className="display-pedestal-glow"></div>
                   <img
                     src={FEATURED_CAR.image || '/assets/car2/nobg.png'}
-                    alt={FEATURED_CAR.name}
+                    alt={featuredName}
                     className="banner-car-img"
                   />
                   <div className="display-shadow-ellipse"></div>
@@ -166,7 +174,7 @@ export default function TopCategories({
               <div className="banner-right-card">
                 <div className="banner-luxury-tag">
                   <Sparkles size={14} className="banner-tag-icon" />
-                  <span>FEATURED AVAILABLE</span>
+                  <span>{t('featured_available')}</span>
                 </div>
                 <Button variant="default" className="banner-learn-btn">
                   <Eye size={16} />
@@ -197,6 +205,7 @@ export default function TopCategories({
           <div className="cars-grid">
             {filteredCars.map((car) => {
               const isFav = favorites.includes(car.id);
+              const carTitle = (language === 'JA' && car.name_ja) ? car.name_ja : car.name;
 
               return (
                 <Card
@@ -210,7 +219,7 @@ export default function TopCategories({
                       <span className="car-status-tag status-in-stock">● {t('in_stock')}</span>
                     )}
                     {car.status === 'sold' && (
-                      <span className="car-status-tag status-sold">SOLD</span>
+                      <span className="car-status-tag status-sold">{t('status_sold')}</span>
                     )}
 
                     {/* Favorite Star Button */}
@@ -224,7 +233,7 @@ export default function TopCategories({
 
                     <img
                       src={car.image}
-                      alt={car.name}
+                      alt={carTitle}
                       className="car-card-img"
                       loading="lazy"
                     />
@@ -239,7 +248,7 @@ export default function TopCategories({
                       </div>
                     </div>
 
-                    <h4 className="car-title">{car.name}</h4>
+                    <h4 className="car-title">{carTitle}</h4>
 
                     {/* Key Specifications Badges */}
                     <div className="car-specs-row">

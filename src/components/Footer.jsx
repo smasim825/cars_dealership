@@ -94,9 +94,8 @@ export default function Footer({ onOpenContact, t }) {
           <a href="mailto:elitemotorsjp@gmail.com" className="contact-item contact-email">
             elitemotorsjp@gmail.com
           </a>
-          <div className="contact-item contact-address">
-            17-3 Aina Shinden, Kawagoe City<br />
-            Saitama Prefecture, Japan
+          <div className="contact-item contact-address" style={{ whitespace: 'pre-line' }}>
+            {t('footer_address')}
           </div>
         </div>
 

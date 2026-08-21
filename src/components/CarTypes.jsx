@@ -64,7 +64,7 @@ const BodyTypeSVG = ({ typeId }) => {
   }
 };
 
-export default function CarTypes({ selectedType, onSelectType, t }) {
+export default function CarTypes({ selectedType, onSelectType, language, t }) {
   return (
     <section className="cartypes-section">
       <div className="site-container">

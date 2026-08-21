@@ -58,6 +58,6 @@ export function playEngineRev(engineType = 'V12') {
     });
 
   } catch (e) {
-    console.warn("Audio Context Playback error:", e);
+    // Audio Context failed or blocked by browser autoplay policy
   }
 }

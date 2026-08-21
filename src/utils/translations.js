@@ -141,8 +141,39 @@ export const TRANSLATIONS = {
     modal_feat_2: 'Adaptive Air Suspension & Telemetry',
     modal_feat_3: '5-Year Comprehensive Concierge Warranty',
 
+    // Body Types
+    cartype_sedan: 'Sedan',
+    cartype_suv: 'SUV / Minivan',
+    cartype_cabriolet: 'Cabriolet',
+    cartype_coupe: 'Coupe',
+    cartype_micro: 'Kei Car',
+
+    // Labels & Badges
+    lbl_engine: 'Engine',
+    lbl_mileage: 'Mileage',
+    lbl_transmission: 'Transmission',
+    featured_available: 'FEATURED AVAILABLE',
+    status_sold: 'SOLD',
+    status_in_stock: 'In Stock',
+
+    // Modal CTAs and notices
+    modal_whatsapp: 'WhatsApp Inquiry',
+    modal_whatsapp_contact: 'Contact via WhatsApp',
+    sold_notice_text: 'This vehicle has been sold. Contact us for similar vehicles.',
+    contact_sub: 'Direct contact channels for our automotive showroom.',
+
     // Compare Modal
-    compare_title: 'Compare Vehicles',
+    compare_eyebrow: 'SIDE-BY-SIDE FLEET COMPARISON',
+    compare_title: 'Vehicle Specifications Comparison',
+    compare_price: 'Price',
+    compare_body_style: 'Body Style',
+    compare_engine: 'Engine & Powertrain',
+    compare_hp: 'Horsepower Output',
+    compare_accel: '0-60 MPH Acceleration',
+    compare_speed: 'Top Velocity',
+    compare_status: 'Availability Status',
+    compare_placeholder: 'Select a 2nd car from the fleet grid to compare side-by-side!',
+    compare_close: 'Close Comparison Window',
     compare_add: 'Add Vehicle',
     compare_select_ph: 'Select a car to compare...',
     compare_vs: 'VS'
@@ -158,7 +189,7 @@ export const TRANSLATIONS = {
     hero_badge: '2026年 最高級フリートエディション',
     hero_title_1: '理想の1台を',
     hero_title_2: '見つける',
-    hero_subtitle: 'ラグジュアリーとパフォーマンス、カスタマイズされた自動車の最高峰をご体感ください。東京・銀座にて厳選されたスーパーカーと高級SUVを展示中。',
+    hero_subtitle: 'ラグジュアリーとパフォーマンス、カスタマイズされた自動車の最高峰をご体感ください。東京・川越にて厳選されたスーパーカーと高級SUVを展示中。',
     hero_search_placeholder: 'ブランド、モデル、キーワードで検索...',
     hero_all_types: '全タイプ',
     hero_explore_btn: 'フリートを見る',
@@ -174,13 +205,18 @@ export const TRANSLATIONS = {
     cartypes_subtitle: 'ボディタイプで探す',
     cartypes_clear: 'フィルター解除 ✕',
     cartypes_cars_count: '台展示中',
+    cartype_sedan: 'セダン',
+    cartype_suv: 'SUV・ミニバン',
+    cartype_cabriolet: 'オープンカー',
+    cartype_coupe: 'クーペ',
+    cartype_micro: '軽自動車',
 
     // About
     about_eyebrow: 'ELITE MOTORS の伝統',
     about_title_1: 'ラグジュアリー自動車の',
     about_title_2: '卓越性を再定義する',
     about_desc_1: '精密なエンジニアリングと時代を超越したデザインへの情熱から設立されたELITE MOTORSは、世界中の愛好家のためのプレミア目的地です。',
-    about_desc_2: '東京・銀座のショールームにて、すべてのスーパーカー、高級SUV、グランドツアラーを厳選。150項目の厳密なマルチポイント点検を実施しています。',
+    about_desc_2: '埼玉・川越のショールームにて、すべてのスーパーカー、高級SUV、グランドツアラーを厳選。150項目の厳密なマルチポイント点検を実施しています。',
     about_feat_1_title: 'ビスポーク・コンシェルジュ',
     about_feat_1_desc: 'オーダーメイドの仕様構成と個別のVIPサポート。',
     about_feat_2_title: '最高品質クオリティ保証',
@@ -209,6 +245,12 @@ export const TRANSLATIONS = {
     showroom_price: 'ショールーム店頭価格',
     no_cars_found: '該当する車両が見つかりませんでした。',
     reset_filters: 'フィルターをリセット',
+    lbl_engine: 'エンジン',
+    lbl_mileage: '走行距離',
+    lbl_transmission: 'トランスミッション',
+    featured_available: '厳選展示車両',
+    status_sold: '売約済み',
+    status_in_stock: '即納可能',
 
     // Services
     services_eyebrow: 'プレミアムコンシェルジュ',
@@ -262,6 +304,7 @@ export const TRANSLATIONS = {
     // Contact Modal
     contact_eyebrow: 'ELITE MOTORS VIP ディレクトリ',
     contact_title_default: 'ELITE MOTORS ショールームお問い合わせ',
+    contact_sub: 'ショールーム直通のお問い合わせ窓口です。',
     contact_vip_line: '直通 VIP ダイヤル',
     contact_email_label: 'コンシェルジュメール',
     contact_showroom_label: 'フラッグシップショールーム',
@@ -288,9 +331,22 @@ export const TRANSLATIONS = {
     modal_feat_1: 'ハンドクラフト・カスタム内装',
     modal_feat_2: 'アダプティブエアサスペンション＆テレメトリー',
     modal_feat_3: '5年長期コンシェルジュ保証',
+    modal_whatsapp: 'WhatsApp お問い合わせ',
+    modal_whatsapp_contact: 'WhatsAppでお問い合わせ',
+    sold_notice_text: 'こちらの車両は売約済みです。同等車両のご提案はお問い合わせください。',
 
     // Compare Modal
-    compare_title: '車両比較',
+    compare_eyebrow: '車両スペック横並び比較',
+    compare_title: '車両スペック詳細比較',
+    compare_price: '価格',
+    compare_body_style: 'ボディタイプ',
+    compare_engine: 'エンジン＆パワートレイン',
+    compare_hp: '最高出力',
+    compare_accel: '0-100km/h 加速',
+    compare_speed: '最高速度',
+    compare_status: '販売状況',
+    compare_placeholder: 'フリート一覧から2台目の車両を選択して比較してください。',
+    compare_close: '比較ウィンドウを閉じる',
     compare_add: '車両を追加',
     compare_select_ph: '比較する車両を選択...',
     compare_vs: 'VS'

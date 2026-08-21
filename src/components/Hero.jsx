@@ -114,11 +114,14 @@ export default function Hero({ onReadMore, onQuickSearch, t }) {
                 className="hero-select-body"
               >
                 <option value="all">{t('hero_all_types')}</option>
-                {CAR_BODY_TYPES.map((type) => (
-                  <option key={type.id} value={type.id}>
-                    {type.name}
-                  </option>
-                ))}
+                {CAR_BODY_TYPES.map((type) => {
+                  const typeLabel = t(`cartype_${type.id}`) !== `cartype_${type.id}` ? t(`cartype_${type.id}`) : type.name;
+                  return (
+                    <option key={type.id} value={type.id}>
+                      {typeLabel}
+                    </option>
+                  );
+                })}
               </select>
               <ChevronDown size={14} className="hero-select-chevron" />
             </div>
@@ -170,7 +173,7 @@ export default function Hero({ onReadMore, onQuickSearch, t }) {
 
           {/* Interactive Color Switcher Controls */}
           <div className="hero-color-picker-card">
-            <span className="color-picker-title">CUSTOMIZE FINISH</span>
+            <span className="color-picker-title">{t('hero_customize_finish')}</span>
             <div className="color-pills-group">
               {COLOR_OPTIONS.map((c) => (
                 <button
